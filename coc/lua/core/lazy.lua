@@ -90,6 +90,8 @@ lazy.setup({
 
     -- Treesitter
     { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
+    -- nvim-comment
+    {'numToStr/Comment.nvim', lazy= false}
 
 
     -- end
