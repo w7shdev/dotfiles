@@ -92,6 +92,15 @@ lazy.setup({
     { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
     -- nvim-comment
     {'numToStr/Comment.nvim', lazy= false}
+    {'lunarvim/horizon.nvim'},
+    {'nvim-lualine/lualine.nvim'},
+    {'rmehri01/onenord.nvim'},
+
+    -- vim exchange
+    {'tommcdo/vim-exchange'},
+    -- themes 
+    {"ellisonleao/gruvbox.nvim", priority = 1000 },
+    {"sainnhe/gruvbox-material"},
 
 
     -- end
