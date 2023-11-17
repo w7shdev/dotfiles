@@ -76,3 +76,6 @@ autocmd('BufLeave', {
   pattern = 'term://*',
   command = 'stopinsert'
 })
+-- php make $ as keyword
+--
+vim.cmd([[autocmd FileType php set iskeyword+=$]])

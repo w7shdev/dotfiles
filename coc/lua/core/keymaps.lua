@@ -69,6 +69,11 @@ map('n', '<leader>n', ':NvimTreeFindFile<CR>')      -- search file
 map('n', '<leader>z', ':TagbarToggle<CR>')          -- open/close
 
 
+-- clearing the highlighting in the normal mode
+map('n', '<Esc>', ':nohl <CR>')                    -- exit
+-- tab to move to nuxt buffer -> inspired by nvchad
+map('n', '<tab>', ':bn <CR>')                    -- exit
+
 -- show gitblame in coc-git and toggle  to make this works use CocConfig
 -- and set the git to show the blame in virtual text coc-git must be installed
 function toggleBlame()
