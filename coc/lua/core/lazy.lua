@@ -91,7 +91,7 @@ lazy.setup({
     -- Treesitter
     { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
     -- nvim-comment
-    {'numToStr/Comment.nvim', lazy= false}
+    {'numToStr/Comment.nvim', lazy= false},
     {'lunarvim/horizon.nvim'},
     {'nvim-lualine/lualine.nvim'},
     {'rmehri01/onenord.nvim'},
