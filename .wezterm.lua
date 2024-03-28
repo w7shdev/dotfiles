@@ -21,7 +21,7 @@ config.window_padding = {
 	bottom = 0,
 }
 -- timeout_milliseconds defaults to 1000 and can be omitted
-config.leader = { key = "w", mods = "CTRL", timeout_milliseconds = 1000 }
+config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
 config.keys = {
 	{
 		key = "|",
