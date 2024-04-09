@@ -7,7 +7,9 @@
 
 -- For information about installed plugins see the README:
 -- neovim-lua/README.md
--- https://github.com/brainfucksec/neovim-lua#readme
+-- original: https://github.com/brainfucksec/neovim-lua#readme
+-- this config is not as the same as the top repo...
+
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -36,21 +38,21 @@ lazy.setup({
     -- The colorscheme should be available when starting Neovim.
     {
       'navarasu/onedark.nvim',
-      lazy = false, -- make sure we load this during startup if it is your main colorscheme
+      lazy = true, -- make sure we load this during startup if it is your main colorscheme
       priority = 1000, -- make sure to load this before all the other start plugins
     },
 
     -- other colorschemes:
     { 'tanvirtin/monokai.nvim', lazy = true },
-    { 'https://github.com/rose-pine/neovim', name = 'rose-pine', lazy = true },
+    { 'https://github.com/rose-pine/neovim', name = 'rose-pine', lazy = false },
 
     -- Icons
-    { 'kyazdani42/nvim-web-devicons', lazy = true },
+    { 'nvim-tree/nvim-web-devicons', lazy = true },
 
     -- Dashboard (start screen)
     {
       'goolord/alpha-nvim',
-      dependencies = { 'kyazdani42/nvim-web-devicons' },
+      dependencies = { 'nvim-tree/nvim-web-devicons' },
     },
 
     -- Git labels
@@ -59,8 +61,14 @@ lazy.setup({
     },
     -- File explorer
     {
-      'kyazdani42/nvim-tree.lua',
-      dependencies = { 'kyazdani42/nvim-web-devicons' },
+      "nvim-neo-tree/neo-tree.nvim",
+      branch = "v3.x",
+      dependencies = {
+        "nvim-lua/plenary.nvim",
+        "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+        "MunifTanjim/nui.nvim",
+        -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+      }
     },
 
 
@@ -92,15 +100,22 @@ lazy.setup({
     { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
     -- nvim-comment
     {'numToStr/Comment.nvim', lazy= false},
-    {'lunarvim/horizon.nvim'},
+    {'lunarvim/horizon.nvim', lazy=true},
     {'nvim-lualine/lualine.nvim'},
     {'rmehri01/onenord.nvim'},
 
     -- vim exchange
     {'tommcdo/vim-exchange'},
-    -- themes 
+    -- themes
     {"ellisonleao/gruvbox.nvim", priority = 1000 },
     {"sainnhe/gruvbox-material"},
+    {"alexandersix/vim-blade"},
+    {"mattn/emmet-vim"},
+    {"xiyaowong/transparent.nvim",
+      config = function()
+          require("transparent").setup()
+      end,
+    },
 
 
     -- end
