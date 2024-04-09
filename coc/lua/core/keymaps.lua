@@ -60,10 +60,10 @@ map('n', '<leader>w', ':w<CR>')
 map('n', '<C-t>', ':term<CR>', { noremap = true })  -- open
 map('t', '<Esc>', '<C-\\><C-n>')                    -- exit
 
--- NvimTree
-map('n', '<C-n>', ':NvimTreeToggle<CR>')            -- open/close
+-- Neotree
+map('n', '<C-n>', ':Neotree reveal<CR>')            -- open/close
 -- map('n', '<leader>f', ':NvimTreeRefresh<CR>')       -- refresh
-map('n', '<leader>n', ':NvimTreeFindFile<CR>')      -- search file
+map('n', '<leader>n', ':Neotree<CR>')      -- search file
 
 -- Tagbar
 map('n', '<leader>z', ':TagbarToggle<CR>')          -- open/close
