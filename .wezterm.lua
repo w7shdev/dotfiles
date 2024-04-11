@@ -79,6 +79,9 @@ config.colors = {
 -- show the tabs at the bottom ...
 -- config.tab_bar_at_bottom = true
 config.hide_tab_bar_if_only_one_tab = true
+config.initial_rows = 38
+config.initial_cols = 160
+
 
 -- and finally, return the configuration to wezterm
 return config
